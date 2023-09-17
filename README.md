@@ -1,20 +1,18 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/07tV9k7q)
-# tPythonListsAndDicts01
-Python List and Dictionary Program
-
-Use the attached sample code to help with Python Program Three - Lists and Dictionaries
-
-More sample code will be pushed to this template repo throughout the week as students ask for help.
-
 Python Program Three - Exploring Python Data Structures with Lists and Dictionaries
 
 Course: Python Programming (CIT-95)
 Professor: Dennis Mohle
+Coder: Matthew Gutierrez
 Fresno City College, Fresno, California
+
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/07tV9k7q)
+# tPythonListsAndDicts01
+Python List and Dictionary Program
 
 Description:
 
-In this assignment, you will continue to build your Python programming skills by exploring and manipulating various Python data structures, including lists, strings, and dictionaries. You have been learning Python for five weeks, and this assignment will challenge you to apply your knowledge effectively. The goal is to reinforce your understanding of Python data structures and how to create user-defined methods to solve real-world problems.
+In this assignment, I use a class/dictionary Python data structure, included a list, and use a menu to guide a user to access list info. The user ultimately can view or add their contact info to a list holding a temporary class/dictionary structure of contacts. Each contact has a name, phone number, email address and is referenced by the name "card" or "contact card". Code sections are labled with comments to help the reader understabd my code. The user menu relies heavily on semi-accurate user input. The program askes for decision confirmation within the flow fo code and menu traversal is relativley easy to follow. The user has also been given menu options to navigate menus in a flow of decision input which allow the user to go back and forth in a linear menu path. The user also has options depending on the input scenarios to terminate or restart the program due to the limited functionality of the written code as program functionality has been limited to a user viewing, adding, or deleting contact cards. Card data is reset to the original list provided in class assingment parameters.
 
 Deliverables:
 
