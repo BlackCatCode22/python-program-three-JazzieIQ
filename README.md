@@ -7,25 +7,28 @@ Fresno City College, Fresno, California
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/07tV9k7q)
-# tPythonListsAndDicts01
+# PythonListsAndDicts
+
 Python List and Dictionary Program
 
+*****Important*****
+
+Program Password: admin
+
 Description:
+In this assignment, I use a class/dictionary Python data structure, included a list, and use a menu to guide a user to access list info. The user ultimately can view or add their contact info to a list holding a temporary class/dictionary structure of contacts. Each contact has a name, phone number, email address and is referenced by the name "card" or "contact card". Code sections are labled with comments to help the reader understand my code. The user menu relies heavily on semi-accurate user input. Users can make typos and the program will try to validate on implied inference of user intended input. The program askes for decision confirmation within the flow of code and menu traversal is relativley easy to follow bu is very linear. User menu options to navigate menus in a flow of decision input which allow the user to go back and forth are smooth linear menu paths. The user also has options depending on the input scenarios to terminate or restart the program. Due to the limited functionality of the written code program functionality has been limited to a user viewing, or adding, or can reset the contact cards and list by ending the program to allow the list to reset. Card data is reset to the original list provided in class assingment parameters.
 
-In this assignment, I use a class/dictionary Python data structure, included a list, and use a menu to guide a user to access list info. The user ultimately can view or add their contact info to a list holding a temporary class/dictionary structure of contacts. Each contact has a name, phone number, email address and is referenced by the name "card" or "contact card". Code sections are labled with comments to help the reader understabd my code. The user menu relies heavily on semi-accurate user input. The program askes for decision confirmation within the flow fo code and menu traversal is relativley easy to follow. The user has also been given menu options to navigate menus in a flow of decision input which allow the user to go back and forth in a linear menu path. The user also has options depending on the input scenarios to terminate or restart the program due to the limited functionality of the written code as program functionality has been limited to a user viewing, adding, or deleting contact cards. Card data is reset to the original list provided in class assingment parameters.
+Delivered:
 
-Deliverables:
+Python Program Three Script: A well-documented Python script named "python_program_three.py" that contains my code for this assignment.
 
-Python Program Three Script: A well-documented Python script named "python_program_three.py" that contains your code for this assignment.
+ReadMe must be read in order to gain admin access to the list on GitHub Classroom.
 
-ReadMe on GitHub Classroom: Use the ReadMe file in your GitHub Classroom remote repository to summarize your program, its functionality, and the approach you took to solve the problem. 
+I created a demo program to show how a dictionary/class can be used to create a list and include user input.
 
-Verbose Comments: Explain and comment each section of your code. Explain your thought process, reasoning, and any assumptions made during the implementation.
+Comments: My program is more focused on a smooth and linear user menu interface. User input and validation allows for a guided path to view, add, review, and terminate an augmentable temporary list of contacts. The code itself should be scalable with minimal adjustment to read and write from an existing text file/list.
 
-Testing Results in ReadMe: In the same ReadMe file on GitHub Classroom, include a section where you describe the test cases you created to ensure the correctness of your program. List the test cases and their outcomes. Explain how your program handles different scenarios and any improvements you would make if you had more time.
-
-Assignment Details:
-You are tasked with developing a Python program that simulates a basic contact management system. Your program should allow users to add, view, and search for contacts. Each contact will have a name, phone number, and email address. You will use Python lists, strings, and dictionaries to implement this system.
+Testing Results: Testing program flow and pathways resulted in all scenarios tested to be succesful with no runtime, logic, or syntax errors. All user input results in the program accepting it or requesting the user to re-enter input or return to a previous menu.
 
 Requirements:
 
