@@ -16,7 +16,7 @@ def script():
 
     # user menu
     def user_menu():
-        manager = input("User Menu. Are you here to manage the contact cards? Y/N: ").upper()
+        manager = input("User Menu --- Are you here to manage the contact cards? Y/N: ").upper()
         if manager[0] == "N":
             print("\nNon-manager access allows you to review the current list without changing it when you exit.")
             confirm_reset = input("\nWould you like to restart menu? Y/N: ").lower()
@@ -36,7 +36,8 @@ def script():
         #view contacts
         if manager[0] == "Y":
             def admin_menu():
-                password = input("Admin Menu: Please enter password: ").lower()
+                #global user_search
+                password = input("Admin Menu --- Please enter password: ").lower()
                 if password == "admin":
                     print("\nThank You, Admin. Menu will move to contact cards.\nThe following shows contact card "
                           "information:\n")
@@ -48,6 +49,7 @@ def script():
                     print("\nMac Mac's program will test user accessibility.\nHere is Mac Mac's card: \n")
                     card_mac_mac = {"name": "Mac Mac", "phone": "559-365-8702", "email": "bongo90g@yahoo.com"}
                     print(card_mac_mac)
+                    print("\nAdding Mac Mac's card to the list... \n")
                     contacts.append(card_mac_mac)
                     print("\n")
                     print(type(contacts))
@@ -56,12 +58,36 @@ def script():
                     print("****Disclaimer****\nMac Mac's List and Dictionary Program is in limited alpha demo phase. "
                           "This is not a permanent directory. Please input your contact card info in the following "
                           "prompt.")
-                    manage_input = input("Do you wish to provide contact card information?" + 'Enter "1" to provide input./Enter "0" to cancel admin access: ')
-                    if manage_input != "1":
-                        print("\nAdmin access cancelled.")
-                        admin_menu()
-                    else:
-                        # user_input
+                    def manage():
+                        # search function
+                        def user_search():
+                            search_input = input("\nSearch by Name: ")
+                            print('\nYou are searching for "' + search_input + '".')
+                            for card in contacts:
+                                for key in card:
+                                    if card[key] == search_input:
+                                        search_result = card[key]
+                                        print("\nYour search query found a card for " + search_input)
+                                        print(search_result)
+                                        search_redo1 = input('\nDo you have another card name you wish to search or return to user menu? "Ok"/"EXIt": ').upper()
+                                        if search_redo1[0] == "O":
+                                            user_search()
+                                        else:
+                                            print("Returning to user menu.")
+                                            user_menu()
+                                    else:
+                                        print("Your query input has no results.")
+                                        search_redo2 = input('\nDo you have another card name you wish to search, '
+                                                             'return to admin manage, or to user menu? '
+                                                             '"Ok"/"return"/"EXIt": ').upper()
+                                        if search_redo2[0] == "O":
+                                            user_search()
+                                        if search_redo2[0] == "r":
+                                            manage()
+                                        else:
+                                            print("Returning to user menu.")
+                                            user_menu()
+                        # user_input function
                         def user_input():
                             print("\nExcellent. Please follow prompts.")
                             user_name = input('\nPlease enter your first and last name as "XXXX XXXXXX"": ')
@@ -76,22 +102,44 @@ def script():
                             if "email" in user_card:
                                 user_card["email"].append(user_email)
                                 print('\nThe card email will be "' + user_email + '".')
-                            print("\n")
+                            print("\nPrinting user card input...\n")
                             print(user_card)
                             contacts.append(user_card)
                             print("\n")
                             print(type(contacts))
                             print(contacts)
                             return
-                        user_input()
-                        print("\nThank you for testing Mac Mac's List and Dictionary Program. To interact with this list again revisit the user menu.")
-                        user_menu_return = input('Return to user menu? "user menu"/"end program"').lower()
-                        if user_menu_return[0] == "u":
-                            print("Returning to user menu.")
-                            user_menu()
+                        #Contact Card Management
+                        manage_input = input("\nChoose Admin task from the following menu. " + 'Enter "1" to perform '
+                                                                                              'individual card '
+                                                                                              'search. / Enter "2" to '
+                                                                                              'provide input. /Enter '
+                                                                                              '"0" to cancel admin '
+                                                                                              'access: ')
+                        if manage_input == "1":
+                            user_search()
+                        if manage_input == "2":
+                            user_input()
+                            print("\nThank you for testing Mac Mac's List and Dictionary Program. To interact with "
+                                  "this list again revisit the user menu or follow prompt.")
+                            user_menu_return = input('\nReturn to menu? "user menu"/"manage"/"end program": ').lower()
+                            if user_menu_return[0] == "u":
+                                print("\n\nReturning to user menu.")
+                                user_menu()
+                            if user_menu_return[0] == "m":
+                                print("\nAdmin Manage Menu")
+                                manage()
+                            else:
+                                print('Program end')
+                                exit(1)
+                        if manage_input != "1" or "2":
+                            print("Admin Command was not understood. Please type new command: ")
+                            manage()
+
                         else:
-                            print('Program end')
-                            exit(1)
+                            print("\nAdmin access cancelled.")
+                            admin_menu()
+                    manage()
                 else:
                     print("Password input was not understood.\n")
                     retype_password = input("Would you like to retype password:" + ' "Yes"/"No": ').lower()
