@@ -1,3 +1,7 @@
+*****Important*****
+
+PROGRAM PASSWORD!!!!!!!!!!!!: admin
+
 Python Program Three - Exploring Python Data Structures with Lists and Dictionaries
 
 Course: Python Programming (CIT-95)
@@ -11,9 +15,7 @@ Fresno City College, Fresno, California
 
 Python List and Dictionary Program
 
-*****Important*****
 
-Program Password: admin
 
 Description:
 In this assignment, I use a class/dictionary Python data structure, included a list, and use a menu to guide a user to access list info. The user ultimately can view, search, or add their contact info to a list holding a temporary class/dictionary structure of contacts. Each contact has a name, phone number, email address and is referenced by the name "card" or "contact card". Code sections are labled with comments to help the reader understand my code. The user menu relies heavily on semi-accurate user input. Users can make typos and the program will try to validate on implied inference of user intended input. The program askes for decision confirmation within the flow of code and menu traversal is relativley easy to follow but is very linear. User menu options will navigate menus in a flow of decision input which allow the user to go back and forth as smoothly as possible in a linear menu paths. The user also has options depending on the input scenarios to terminate or restart the program. Due to the limited functionality of the written code program functionality has been limited to a user viewing, or searching, or adding, or can reset the contact cards and list by ending the program to allow the list to reset. Card data is reset to the original list provided in class assingment parameters.
