@@ -133,16 +133,33 @@ def script():
                             user_input()
                             print("\nThank you for testing Mac Mac's List and Dictionary Program. To interact with "
                                   "this list again revisit the user menu or follow prompt.")
-                            user_menu_return = input('\nReturn to menu? "user menu"/"manage"/"end program": ').lower()
-                            if user_menu_return[0] == "u":
-                                print("\n\nReturning to user menu.")
-                                user_menu()
-                            if user_menu_return[0] == "m":
-                                print("\nAdmin Manage Menu")
-                                manage()
-                            else:
-                                print('Program end')
-                                exit(1)
+                            def added_contact_return():
+                                user_menu_return = input('\nReturn to menu? "user menu"/"manage"/"end program": ').lower()
+                                if user_menu_return[0] == "u":
+                                    print("\n\nReturning to user menu.")
+                                    user_menu()
+                                if user_menu_return[0] == "m":
+                                    print("\nAdmin Manage Menu")
+                                    manage()
+                                if user_menu_return[0] == "e":
+                                    print('\nYou chose program termination. ')
+                                    user_confirm_end = input('\nIs this correct? "Terminate" / "Return( to previous '
+                                                             'Menu): ').upper()
+                                    #print(user_confirm_end[0])
+                                    if user_confirm_end[0] == "T" or user_confirm_end == "Y":
+                                        #print(user_confirm_end == "T" or "Y")
+                                        print("\nMac Mac's program thanks you, goodbye.")
+                                        exit(1)
+                                    elif user_confirm_end[0] == "R" or user_confirm_end == "N":
+                                        #print(user_confirm_end == "R" or "N")
+                                        added_contact_return()
+                                    else:
+                                        print("\nI'm sorry what was that? Returning to previous menu: ")
+                                        added_contact_return()
+                                else:
+                                    print("\nUser command not clear repeating query.")
+                                    added_contact_return()
+                            added_contact_return()
                         if manage_input == "0":
                             print("\nAdmin access cancelled.")
                             admin_menu()
