@@ -164,11 +164,11 @@ def script():
                             print("\nAdmin access cancelled.")
                             admin_menu()
                         if manage_input != "1" or "2" or "0":
-                            print("Admin Command was not understood. Please type new command: ")
+                            print("\nAdmin Command was not understood. Please type new command: ")
                             manage()
                     manage()
                 else:
-                    print("Password input was not understood.\n")
+                    print("\nPassword input was incorrect.\n")
                     retype_password = input("Would you like to retype password:" + ' "Yes"/"No": ').lower()
                     if retype_password[0] == "y":
                         admin_menu()
